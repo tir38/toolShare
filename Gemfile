@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'rspec-rails'
-gem 'factory_girl_rails'
+gem 'factory_girl_rails' , '~> 4.0'
 gem 'jquery-rails'
 
 group :development, :test do
