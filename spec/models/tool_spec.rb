@@ -8,6 +8,8 @@ describe Tool do
   subject (@testTool)
 
   it {should respond_to(:name)}
+  it {should have_many(:userTools)}
+  it {should have_many(:users).through(:userTools)}
 
   it "should be valid" do
     @testTool.should be_valid
@@ -17,6 +19,8 @@ describe Tool do
     @testTool.name = ""
     @testTool.should_not be_valid
   end
+
+
 end
 
 

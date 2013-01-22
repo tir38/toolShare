@@ -9,6 +9,8 @@ describe User do
   subject(@testUser)
 
   it{ should respond_to(:name)}
+  it{ should have_many(:userTools)}
+  it{ should have_many(:tools).through(:userTools)}
 
   it "should be valid" do
     @testUser.should be_valid

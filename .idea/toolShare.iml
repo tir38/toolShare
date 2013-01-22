@@ -16,7 +16,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.2, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.0, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, RVM: ruby-1.9.2-p320) [gem]" level="application" />
@@ -38,7 +37,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.9, RVM: ruby-1.9.2-p320) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass-rails (v3.2.5, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.16.0, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.3, RVM: ruby-1.9.2-p320) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v1.3.0, RVM: ruby-1.9.2-p320) [gem]" level="application" />
