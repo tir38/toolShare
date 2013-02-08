@@ -1,8 +1,18 @@
+# == Schema Information
+#
+# Table name: tools
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  name       :string(255)
+#
+
 require 'spec_helper'
 
 describe Tool do
   before(:each) do
-    @testTool = FactoryGirl.create(:tool)# create tool factory
+    @testTool = FactoryGirl.create(:tools)# create tools factory
   end
 
   subject (@testTool)

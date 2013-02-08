@@ -1,5 +1,5 @@
 ToolShare::Application.routes.draw do
 
-  match 'tools' => 'tool#index'
+  resources :tools
 
 end

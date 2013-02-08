@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :tool, class: Tool do
+  factory :tools, class: Tool do
     name "hammer"
   end
 

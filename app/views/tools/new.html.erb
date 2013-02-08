@@ -1,0 +1,9 @@
+<h1> Add a new tool</h1>
+<%= form_for (@tool) do |f|%>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.submit "Add tool" %>
+
+</p>
+<% end  %>

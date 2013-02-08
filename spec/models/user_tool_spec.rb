@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: user_tools
+#
+#  id         :integer          not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  user_id    :integer
+#  tool_id    :integer
+#
+
 require 'spec_helper'
 
 describe UserTool do
@@ -17,7 +28,7 @@ describe UserTool do
     @testUserTool.should_not be_valid
   end
 
-  it "should not be valid without tool id" do
+  it "should not be valid without tools id" do
     @testUserTool.tool_id = NIL
     @testUserTool.should_not be_valid
   end
