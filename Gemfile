@@ -6,6 +6,7 @@ gem 'factory_girl_rails' , '~> 4.0'
 gem 'jquery-rails'
 gem 'shoulda', '3.3.2'  # adds rspec matchers for has_many through relationships
 gem 'annotate'
+gem 'bcrypt-ruby', '3.0.1'
 
 group :development, :test do
   gem 'sqlite3'
