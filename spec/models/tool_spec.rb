@@ -12,7 +12,7 @@ require 'spec_helper'
 
 describe Tool do
   before(:each) do
-    @testTool = FactoryGirl.create(:tools)# create tools factory
+    @testTool = FactoryGirl.create(:tool)# create tools factory
   end
 
   subject (@testTool)

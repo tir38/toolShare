@@ -4,5 +4,5 @@ ToolShare::Application.routes.draw do
   resources :tools
 
   root :to => "static#index"
-
+  match '/signup', :to=> 'users#new'
 end

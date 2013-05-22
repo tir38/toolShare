@@ -15,8 +15,8 @@ require 'spec_helper'
 describe User do
 
   before do
-    #@testUser = FactoryGirl.create(:user)
-    @testUser = User.new(name: "test user", email: "email@email.com", password: "myPassword", password_confirmation: "myPassword")
+    @testUser = FactoryGirl.create(:user)
+    #@testUser = User.new(name: "test user", email: "email@email.com", password: "myPassword", password_confirmation: "myPassword")
   end
 
   subject(@testUser)
