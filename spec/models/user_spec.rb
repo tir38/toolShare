@@ -28,6 +28,7 @@ describe User do
   it{ should respond_to(:password)}
   it{ should respond_to(:password_confirmation)}
   it{ should respond_to(:authenticate)}
+  it{ should respond_to(:remember_token)}
 
   # relationships
   it{ should have_many(:userTools)}
@@ -106,5 +107,13 @@ describe User do
       specify {userWithInvalidPassword.should be_false}    # ... not testing the same thing?
     end
   end
+
+  describe "remember token"  do
+    before {@testUser.save}
+
+    it{@testUser.remember_token.should_not be_blank}
+    #its(:remember_token) {should_not be_blank} #its isn't working with rspec-core 2.12
+  end
+
 end
                                                                                                 ``

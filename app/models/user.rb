@@ -30,12 +30,17 @@ class User < ActiveRecord::Base
     has_many :userTools
     has_many :tools,  :through => :userTools
 
-  # before saves
+  # before saves; a callback
     before_save {|user| user.email = email.downcase} # ensures that email is saved in all lowercase
+    before_save :create_remember_token
 
   # accessible attributes (not all of these attributes have DB entries)
     attr_accessible :name, :email, :password, :password_confirmation
     has_secure_password # pulls in needed secure_password.rb toolbox
 
+  private
+    def create_remember_token # sets its own remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 
 end
