@@ -82,7 +82,7 @@ describe User do
 
   describe "authenticate method" do
     before { @testUser.save }                                      # before starting tests, save testUser
-    let(:retrievedUser) {User.find_by_email(@testUser.email)}   # retrieve testUser from DB by his email address
+    let(:retrievedUser) {User.find_by_email(@testUser.email)}      # retrieve testUser from DB by his email address
 
     describe "with valid password" do
       it "should retrieve user" do
@@ -94,8 +94,17 @@ describe User do
       # I don't fully understand how these two tests are different
       let (:userWithInvalidPassword) {retrievedUser.authenticate("wrongPassword")}      # create another user but with wrong password
 
-      it {should_not == userWithInvalidPassword}         # are these two lines...
-      specify {userWithInvalidPassword.should be_false}   # ... not testing the same thing?
+      # This is a slightly weird way of doing this since I expect authenticate to return "false"
+      # on failed authentication attempt. The code below looks like I'm comparing two users:
+      # testUser and retrievedUser. However, retrievedUser (with wrong password) is not a user at all,
+      # but simply "false".
+
+      it "should not retrieve user" do
+        @testUser.should_not == userWithInvalidPassword         # are these two lines...
+      end
+
+      specify {userWithInvalidPassword.should be_false}    # ... not testing the same thing?
     end
   end
 end
+                                                                                                ``
