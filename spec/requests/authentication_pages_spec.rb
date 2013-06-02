@@ -7,12 +7,12 @@ describe "AuthenticationPages" do
   describe "sign in page" do
     before {visit signin_path}
 
-    it {should have_selector('h1', text: 'Sign In')}
+    it {should have_selector('h1', text: 'Sign in')}
 
     describe "invalid sign in with no information" do
       before {click_button "Sign in"}
 
-      it {should have_selector('h1', text: 'Sign In')}
+      it {should have_selector('h1', text: 'Sign in')}
       it {should have_selector('div.alert.alert-error', text: 'Invalid')}
 
       # it should not display error message on any further pages
@@ -41,8 +41,6 @@ describe "AuthenticationPages" do
       it {should have_selector('h1', text: testUser.name)}      # should have user's name
       it {should have_link('Sign out', href: signout_path)}      # should have sign out link
       it {should_not have_link('Sign in', href: signin_path)}  # should not have sign in link
-
-
     end
   end
 end

@@ -13,13 +13,15 @@ class SessionsController < ApplicationController
     else
        # user either doesn't exist or doesn't authenticate
       flash.now[:error] = "Invalid email/password combination"
+      render 'new'
     end
 
-    render 'new'
   end
 
 
   def destroy
+    sign_out(@user)
+    redirect_to root_path
   end
 
 end

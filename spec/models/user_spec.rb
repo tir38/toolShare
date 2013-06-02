@@ -112,7 +112,7 @@ describe User do
     before {@testUser.save}
 
     it{@testUser.remember_token.should_not be_blank}
-    #its(:remember_token) {should_not be_blank} #its isn't working with rspec-core 2.12
+    #its(:remember_token) {should_not be_blank} # what is the subject here? this isn't working
   end
 
 end
